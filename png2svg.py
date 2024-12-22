@@ -4,7 +4,7 @@ import random
 import numpy as np
 import copy
 from tqdm import tqdm  # For progress bar visualization
-# import svgwrite
+import svgwrite
 
 def genotype(shape_type, width, height):
     """
@@ -357,8 +357,6 @@ def optimize_with_elitism_and_diversity(
     best_solution = population[best_index]
     best_image = render_image(best_solution, width, height)
     return best_solution, best_image
-
-import svgwrite
 
 def save_as_svg(shapes, width, height, filename='output'):
     """
